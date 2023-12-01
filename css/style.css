@@ -30,6 +30,20 @@ p {
   margin: 0;
   color: #E1D4C9;
 }
+.heading2 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+  text-align: center;
+  margin: 0;
+}
+.heading3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+  text-align: center;
+  margin: 0;
+}
 .accent {
   font-style: italic;
   color: #B0907A;
@@ -116,6 +130,8 @@ p {
   line-height: 150%;
 }
 .enjoy__link {
+  position: relative;
+  overflow: hidden;
   display: flex;
   width: 200px;
   padding: 20px 78px;
@@ -124,4 +140,112 @@ p {
   gap: 8px;
   border-radius: 100px;
   background-color: #E1D4C9;
+}
+.enjoy__link::before {
+  content: url(../images/coffee-cup.svg);
+  position: absolute;
+  top: 50%;
+  right: 55px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+.enjoy__link:hover::before {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.favorite__slider img {
+  width: 480px;
+  overflow: hidden;
+}
+.favorite__text {
+  text-align: center;
+}  
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+.main__favorite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  gap: 40px;
+}
+.favorite__inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  padding-bottom: 40px;
+}
+.favorite__slider {
+  min-width: 480px;
+  width: 1152px;
+  max-width: 1162px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.slider__controls {
+  position: absolute;
+  top: 43%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.slider__next__arrow, .slider__preview__arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 100px;
+  border: 1px solid #665F55;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.slider__preview__arrow {
+  position: absolute;
+  left: 0;
+}
+.slider__next__arrow {
+  right: 0;
+  position: absolute;
+}
+.slider__next__arrow:hover, .slider__preview__arrow:hover {
+  color: #E1D4C9;
+  background-color: #665F55;
+  transition: all 0.3s ease;
+}
+.slider__indicators {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+}
+.slider__indicator__dark, .slider__indicator__light {
+  width: 40px;
+  height: 4px;
+  margin: 0;
+  border-radius: 10%;
+  transition: background-color 0.3s ease;
+  background-color: #C1B6AD;
+}
+.slider__indicator__dark {
+  background-color: #665F55;
+}
+.slider__indicator__light {
+  color: #C1B6AD;
 }
