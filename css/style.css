@@ -36,6 +36,7 @@ p {
   line-height: 125%;
   text-align: center;
   margin: 0;
+  align-self: stretch;
 }
 .heading3 {
   font-size: 24px;
@@ -248,4 +249,55 @@ p {
 }
 .slider__indicator__light {
   color: #C1B6AD;
+}
+.about__inner {
+  display: flex;
+  align-items: center;
+}
+.head__about {
+  padding-bottom: 40px;
+  padding-top: 100px;
+  justify-self: stretch;
+  text-align: start;
+}
+.about__column + .about__column {
+  padding-left: 40px;
+}
+.about__column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 40px;
+}
+.about__column-img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 100%;
+  overflow: hidden;
+  position: relative;
+  transform: scale(1.1);
+}
+.big {
+  height: 590px;
+  width: 660px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.small {
+  height: 430px;
+  width: 660px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+
+
+.img__container img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.img__container:hover img {
+  transform: scale(1.0);
+  transition: transform 0.3s ease;
 }
