@@ -290,6 +290,64 @@ p {
   border-radius: 20px;
 }
 
+.mobile-app__inner {
+  margin-top: 100px;
+  display: flex;
+}
+.download {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.download h2 {
+  text-align: start;
+}
+.mobile-text {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 400;
+  margin: 40px 0 40px 0;
+}
+.top__button {
+  font-size: 10px;
+  margin-bottom: 2px;
+  line-height: 140%;
+  font-weight: 600;
+}
+.bottom__button {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+}
+.button__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 8px;
+}
+.button__apple, .button__google {
+  border-radius: 100px;
+  border: 1px solid #665F55;
+  padding: 12px 20px;
+  display: flex;
+  width: 200px;
+  align-items: center;
+}
+.button__apple:hover, .button__google:hover {
+  background-color: #665F55;
+  color: #E1D4C9;
+  transition: all 0.3s ease;
+}
+.button__apple:hover img, .button__google:hover img {
+  fill: #E1D4C9;
+  stroke: #E1D4C9;
+  transition: all 0.3s ease;
+}
+.mobile__buttons {
+  display: flex;
+  gap: 20px;
+}
+
 
 
 .img__container img {
